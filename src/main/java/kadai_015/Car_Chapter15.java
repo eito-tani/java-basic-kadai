@@ -7,6 +7,8 @@ public class Car_Chapter15 {
 
 		//ギアの値により速度を変える
 		public void changeGear(int afterGear) {
+			System.out.println("ギア" + this.gear + "から" + afterGear + "に切り替えました");
+			this.gear = afterGear;
 			this.speed = switch(this.gear) {
 				case 1 -> 10;
 				case 2 -> 20;
@@ -15,9 +17,6 @@ public class Car_Chapter15 {
 				case 5 -> 50;
 				default -> 10;
 				};
-			System.out.println("ギア" + this.gear + "から" + afterGear + "に切り替えました");
-			this.speed = afterGear * 10;
-			
 		}
 		
 		// ギアチェンジ後の速度を表示する
