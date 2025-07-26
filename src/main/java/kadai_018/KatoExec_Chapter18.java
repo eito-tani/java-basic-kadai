@@ -3,16 +3,21 @@ package kadai_018;
 public class KatoExec_Chapter18 {
 	
 	public static void main(String[] args) {
-
-		Kato_Chapter18[] familyMembers = {
-				new KatoTaro_Chapter18(),
-				new KatoIchiro_Chapter18(),
-				new KatoHanako_Chapter18()
-		};
 		
-		for(Kato_Chapter18 member : familyMembers) {
-			member.execIntroduce();
-		}
+		//各子クラスのインスタンスを生成する
+		KatoTaro_Chapter18 taro = new KatoTaro_Chapter18();
+		KatoIchiro_Chapter18 ichiro = new KatoIchiro_Chapter18();
+		KatoHanako_Chapter18 hanako = new KatoHanako_Chapter18();
+		
+		//setGivenメソッドを実行する
+		taro.setGivenName();
+		ichiro.setGivenName();
+		hanako.setGivenName();
+		
+		//execIntroduceメソッドを実行する
+		taro.execIntroduce();
+		ichiro.execIntroduce();
+		hanako.execIntroduce();
 	}
 
 }
