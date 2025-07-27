@@ -12,10 +12,10 @@ public class Dictionary_Chapter21 {
 			englishWords.put("banana", "バナナ");
 			englishWords.put("lemon", "レモン");
 			englishWords.put("pear", "梨");
-			englishWords.put("kiwi", "キウイ");
+			englishWords.put("kiwi", "キウィ");
 			englishWords.put("strawberry", "いちご");
 			englishWords.put("grape", "ぶどう");
-			englishWords.put("muscut", "マスカット");
+			englishWords.put("muscat", "マスカット");
 			englishWords.put("cherry", "さくらんぼ");
 		}
 		
@@ -25,7 +25,7 @@ public class Dictionary_Chapter21 {
 				if(englishWords.containsKey(word)) {
 					System.out.println(word + "の意味は" + englishWords.get(word));
 				}else {
-					System.out.println(word + "の意味は辞書に存在しません" );
+					System.out.println(word + "は辞書に存在しません" );
 				}
 			}
 		}
