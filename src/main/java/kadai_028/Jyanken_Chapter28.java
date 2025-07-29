@@ -17,19 +17,20 @@ public class Jyanken_Chapter28 {
 		//正しいじゃんけんの手であるか判定する
 		String myChoice = scanner.next();
 		//
-		if (myChoice.equals("r") || myChoice.equals("c") || myChoice.equals("p")) {
-			scanner.close();
+		if (myChoice.equals("r") || myChoice.equals("s") || myChoice.equals("p")) {
+
 		} else {
 			System.out.println("エラー：正しいじゃんけんの手ではありません。再度自分のじゃんけんの手を選んでください");
 			return getMyChoice();
 		}
+		scanner.close();
 		return myChoice;
 	}
 
 	//対戦相手のじゃんけんの手を乱数で選ぶ
-	public String getRamdom() {
+	public String getRandom() {
 		//配列にじゃんけんの値をセットする
-		String[] choice = { "r", "c", "p" };
+		String[] choice = { "r", "s", "p" };
 
 		//乱数で対戦相手のじゃんけんの値を選ぶ
 		int computerChoice = (int) Math.floor(Math.random() * 3);
@@ -45,14 +46,14 @@ public class Jyanken_Chapter28 {
 		//自分と相手のじゃんけんの手を出力する
 		HashMap<String, String> hands = new HashMap<String, String>();
 		hands.put("r", "グー");
-		hands.put("c", "チョキ");
+		hands.put("s", "チョキ");
 		hands.put("p", "パー");
-		String computerHand = getRamdom();
+		String computerHand = getRandom();
 		System.out.println("自分の手は" + hands.get(myHand) + ",対戦相手の手は" + hands.get(computerHand));
 
 		//自分と相手のじゃんけんの手を比較する
-		if ((myHand.equals("r") && computerHand.equals("c"))
-				|| (myHand.equals("c") && computerHand.equals("p"))
+		if ((myHand.equals("r") && computerHand.equals("s"))
+				|| (myHand.equals("s") && computerHand.equals("p"))
 				|| (myHand.equals("p") && computerHand.equals("r"))) {
 			System.out.println("自分の勝ちです");
 		} else if (myHand.equals(computerHand)) {
